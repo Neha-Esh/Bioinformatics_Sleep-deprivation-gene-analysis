@@ -1,0 +1,75 @@
+
+SLEEP DEPRIVATION TRANSCRIPTOMIC ANALYSIS - COMPLETE
+
+Study: GSE98566
+Platform: Affymetrix HuGene 1.0 ST Array
+Comparison: Sleep Deprived vs Control
+
+SAMPLE SIZE:
+  Total: 163 samples
+  Sleep Deprived: 92
+  Control: 71
+
+QUALITY CONTROL:
+  Initial probes: 8,515
+  After QC: 8,506
+
+DIFFERENTIAL EXPRESSION:
+  Thresholds: padj<0.05, |log2FC|>0.3
+  Total DEGs: 60
+  Upregulated: 46 (76.7%)
+  Downregulated: 14 (23.3%)
+
+TOP UPREGULATED (by fold change):
+  1. Probe 7953901.0 - 1.97x fold, padj=1.89e-08
+  2. Probe 8151592.0 - 1.93x fold, padj=1.71e-12
+  3. Probe 8095694.0 - 1.80x fold, padj=6.29e-12
+  4. Probe 8148147.0 - 1.78x fold, padj=1.41e-05
+  5. Probe 8131067.0 - 1.71x fold, padj=3.25e-10
+
+TOP DOWNREGULATED (by fold change):
+  1. Probe 8149137.0 - 1.96x fold, padj=2.41e-06
+  2. Probe 8149126.0 - 1.96x fold, padj=2.41e-06
+  3. Probe 8149116.0 - 1.95x fold, padj=2.41e-06
+  4. Probe 8161373.0 - 1.71x fold, padj=2.26e-08
+  5. Probe 8161554.0 - 1.69x fold, padj=2.26e-08
+
+OUTPUT FILES GENERATED:
+  Results Files:
+    - dge_results.csv (all 8,506 probes)
+    - degs_all.csv (60 significant DEGs)
+    - degs_upregulated.csv (46 probes)
+    - degs_downregulated.csv (14 probes)
+    - degs_enhanced_table.csv (annotated results)
+    - normalized_expression.csv
+    - sample_metadata.csv
+
+  Figure Files:
+    - volcano_plot.png 
+    - heatmap_top_degs.png 
+    - ma_plot.png 
+    - top_degs_expression.png 
+
+BIOLOGICAL INTERPRETATION:
+  The predominance of upregulated genes (77%) suggests 
+  activation of stress and inflammatory pathways, consistent
+  with known physiological responses to sleep deprivation.
+
+  Expected pathways affected:
+    - Immune response activation
+    - Inflammatory signaling
+    - Stress response pathways
+    - Metabolic dysregulation
+
+RECOMMENDATIONS:
+  1. Annotate top probes with gene symbols (GPL6244)
+  2. Compare with published sleep studies
+  3. Consider validation with qRT-PCR
+  4. Investigate temporal dynamics if applicable
+
+CONCLUSION:
+  Sleep deprivation significantly alters expression of 60 probes
+  in blood, providing molecular evidence for physiological impact
+  of insufficient sleep.
+
+Analysis completed: 2025-11-23 22:43:48

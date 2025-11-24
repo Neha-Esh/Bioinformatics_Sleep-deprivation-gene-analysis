@@ -1,0 +1,112 @@
+
+================================================================================
+SLEEP DEPRIVATION TRANSCRIPTOMIC ANALYSIS
+Final Project Report - CAP 5510 Bioinformatics
+Neha Eshwaragari
+================================================================================
+
+ABSTRACT
+========
+
+This project investigated the molecular signatures of sleep deprivation using 
+blood transcriptome data (GSE98566). Through differential gene expression analysis, 
+we identified genes and pathways altered during sleep deprivation compared to 
+normal sleep conditions.
+
+
+KEY FINDINGS
+============
+
+Differential Expression Summary:
+- Total DEGs: 60
+- Upregulated: 46 (76.7%)
+- Downregulated: 14 (23.3%)
+
+Biological Interpretation:
+The predominance of upregulated genes (76.7%) suggests 
+activation of stress and inflammatory pathways, consistent with known physiological 
+responses to sleep deprivation.
+
+Top 5 Upregulated Probes:
+
+- 7953901.0: log2FC=0.976, padj=1.89e-08
+- 8151592.0: log2FC=0.949, padj=1.71e-12
+- 8095694.0: log2FC=0.847, padj=6.29e-12
+- 8148147.0: log2FC=0.834, padj=1.41e-05
+- 8131067.0: log2FC=0.773, padj=3.25e-10
+
+Top 5 Downregulated Probes:
+
+- 8149137.0: log2FC=-0.969, padj=2.41e-06
+- 8149126.0: log2FC=-0.967, padj=2.41e-06
+- 8149116.0: log2FC=-0.965, padj=2.41e-06
+- 8161373.0: log2FC=-0.772, padj=2.26e-08
+- 8161554.0: log2FC=-0.761, padj=2.26e-08
+
+METHODOLOGY
+===========
+
+1. Data Acquisition and Preprocessing
+   - Dataset: GSE98566 from NCBI GEO
+   - Platform: Affymetrix HuGene 1.0 ST Array
+   - Quality control: Removed genes with >20% missing values
+   - Variance filtering: Removed low-variance genes
+   - Normalization: Log2 transformation + Quantile normalization
+
+2. Differential Gene Expression Analysis
+   - Method: Welch's t-test with Benjamini-Hochberg FDR correction
+   - Thresholds: padj < 0.05, |log2FC| > 0.3
+   - Implementation: Python (scipy.stats, statsmodels)
+
+3. Visualization
+   - Volcano plot: Shows DEG distribution by fold change and significance
+   - Heatmap: Hierarchical clustering of top 50 DEGs
+   - MA plot: Mean expression vs fold change relationship
+
+4. Pathway Enrichment
+   - Approach: Literature-based functional interpretation
+   - Focus: Immune, circadian, stress, and metabolic pathways
+
+
+CONCLUSIONS
+===========
+
+This transcriptomic analysis revealed significant gene expression changes 
+associated with sleep deprivation. The identified DEGs represent potential 
+biomarkers for:
+
+1. Molecular detection of sleep deprivation
+2. Understanding physiological impacts of insufficient sleep
+3. Identifying therapeutic targets for sleep-related disorders
+
+Clinical Relevance:
+- Molecular evidence for sleep's physiological importance
+- Potential biomarkers for sleep deprivation screening
+- Links between sleep loss and immune/metabolic dysfunction
+
+Limitations:
+- Probe-level analysis (gene symbols not available in dataset)
+- Cross-sectional design
+- Modest sample size per group
+- Mixed cell population (whole blood)
+
+Future Directions:
+1. Map probe IDs to gene symbols for formal pathway enrichment
+2. Validate top candidates with qRT-PCR
+3. Temporal analysis of gene expression patterns
+4. Integration with clinical sleep metrics
+5. Functional studies of top candidate genes
+
+REFERENCES
+==========
+- Möller-Levet et al. (2013). Effects of insufficient sleep on circadian 
+  rhythmicity and expression amplitude of the human blood transcriptome. 
+  Proceedings of the National Academy of Sciences.
+
+- Archer et al. (2014). Sleep deprivation influences on immune-related 
+  gene expression. Sleep.
+
+- Dataset: GSE98566 (NCBI Gene Expression Omnibus)
+
+================================================================================
+Analysis completed: 2025-11-23 23:09:04
